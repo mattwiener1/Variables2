@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Principal;
 
 namespace Variables2
 {
@@ -23,11 +24,17 @@ namespace Variables2
 
             //Console.WriteLine(method);
 
-            var matt = new Person();
-            matt.firstName = "Matt";
-            matt.lastName = "Wiener";
+            var matt = new Person
+            {
+                firstName = "Matt",
+                lastName = "Wiener"
+            };
 
             matt.Introduce();
+            
+            var total = new Calculator();
+            Console.WriteLine(total.Add(12,13));
+
 
         }
     }
